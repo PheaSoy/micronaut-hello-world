@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: hello-world
+spec:
+    selector:
+      matchLabels:
+        app: hello-world
+    template:
+      metadata:
+        labels:
+            app: hello-world
+      spec:
+        containers:
+        - name: hello-world
+          image: micronaut-skaffold
